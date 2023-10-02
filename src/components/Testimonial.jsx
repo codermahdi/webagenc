@@ -1,3 +1,4 @@
+import Image from "next/image";
 async function getData() {
   const res = await fetch(process.env.BASE_URL + "api/TestimonialList");
 
@@ -32,10 +33,12 @@ const Testimonial = async () => {
                     data-wow-delay=".1s"
                   >
                     <div className="flex items-center mb-4">
-                      <img
+                      <Image
                         className="h-16 w-16 rounded-full object-cover"
                         src={item.image}
-                        alt="Monst"
+                        width={100}
+                        height={100}
+                        alt="Picture of the author"
                       />
                       <div className="pl-4">
                         <strong className="mt-6 mb-2 text-md">

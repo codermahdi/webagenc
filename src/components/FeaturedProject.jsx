@@ -1,3 +1,4 @@
+import Image from "next/image";
 async function getData() {
   const res = await fetch(process.env.BASE_URL + "api/BrandList");
 
@@ -50,10 +51,17 @@ const FeaturedProject = async () => {
                   {data.map((item, i) => {
                     return (
                       <div key={i} className="w-full lg:w-1/3 px-3">
-                        <img
+                        {/* <img
                           className="w-full h-32 object-cover rounded"
                           src={item.image}
                           alt=""
+                        /> */}
+                        <Image
+                          className="w-full h-32 object-cover rounded"
+                          src={item.image}
+                          width={100}
+                          height={100}
+                          alt="note"
                         />
                       </div>
                     );

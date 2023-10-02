@@ -1,3 +1,4 @@
+import Image from "next/image";
 async function getData() {
   const res = await fetch(process.env.BASE_URL + "api/AllProject");
 
@@ -36,10 +37,17 @@ const Project = async () => {
                 return (
                   <div key={i} className="mb-8 w-full md:w-1/2 lg:w-1/3 px-4">
                     <div className="bg-white rounded">
-                      <img
+                      {/* <img
                         className="rounded-t object-cover h-128"
                         src={item.image}
                         alt=""
+                      /> */}
+                      <Image
+                        className="rounded-t object-cover h-128"
+                        src={item.image}
+                        width={500}
+                        height={100}
+                        alt="Picture of the author"
                       />
                       <div className="p-6">
                         <span className="text-gray-400">2021</span>

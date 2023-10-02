@@ -1,3 +1,4 @@
+import Image from "next/image";
 async function getData() {
   const res = await fetch(process.env.BASE_URL + "api/BrandList");
 
@@ -21,7 +22,13 @@ const Brand = async () => {
                 <div key={i} className="mb-4 w-full md:w-1/2 lg:w-1/4 px-2">
                   <div className="py-16 bg-gray-50 rounded">
                     <a href="#">
-                      <img className="mx-auto h-8" src={item.image} alt="" />
+                      <Image
+                        className="mx-auto h-8"
+                        src={item.image}
+                        width={100}
+                        height={100}
+                        alt="Picture of the author"
+                      />
                     </a>
                   </div>
                 </div>

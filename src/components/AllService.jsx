@@ -1,3 +1,4 @@
+import Image from "next/image";
 async function getData() {
   const res = await fetch(process.env.BASE_URL + "api/AllService");
 
@@ -36,10 +37,11 @@ async function AllService() {
                 return (
                   <div className="w-full md:w-1/2 lg:w-1/3 mb-8 px-4">
                     <a href="#">
-                      <img
-                        className="h-80 w-full mx-auto object-cover rounded"
+                      <Image
                         src={item.image1}
-                        alt=""
+                        width={500}
+                        height={500}
+                        alt="Picture of the author"
                       />
                     </a>
                   </div>

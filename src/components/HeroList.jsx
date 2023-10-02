@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 async function getData() {
@@ -46,27 +47,35 @@ export default async function HeroList() {
             </div>
             <div className="w-full lg:w-1/2 px-4">
               <div className="flex flex-wrap lg:mb-4 lg:ml-6">
-                <img
+                <Image
                   className="w-full md:w-1/2 lg:w-1/3 h-64 p-2 object-cover rounded-4xl lg:rounded-br-none"
                   src={data.image1}
-                  alt=""
+                  width={100}
+                  height={100}
+                  alt="Picture of the author"
                 />
-                <img
+                <Image
                   className="w-full md:w-1/2 lg:w-2/3 h-64 p-2 object-cover rounded-4xl lg:rounded-bl-none"
                   src={data.image2}
-                  alt=""
+                  width={100}
+                  height={100}
+                  alt="Picture of the author"
                 />
               </div>
               <div className="flex flex-wrap lg:mb-4 lg:mr-6">
-                <img
+                <Image
                   className="w-full md:w-1/2 lg:w-2/3 h-64 p-2 object-cover rounded-4xl lg:rounded-br-none"
                   src={data.image3}
-                  alt=""
+                  width={100}
+                  height={100}
+                  alt="Picture of the author"
                 />
-                <img
+                <Image
                   className="w-full md:w-1/2 lg:w-1/3 h-64 p-2 object-cover rounded-4xl lg:rounded-bl-none"
                   src={data.image4}
-                  alt=""
+                  width={100}
+                  height={100}
+                  alt="Picture of the author"
                 />
               </div>
             </div>
